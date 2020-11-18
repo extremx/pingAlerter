@@ -8,4 +8,4 @@ todo:
 
 -run in background and loop forever
 
--Olny alert once per downed host (until recovery)
+-Only alert once per downed host (until recovery)
