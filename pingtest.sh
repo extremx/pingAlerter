@@ -34,7 +34,9 @@ do
       current=`cat /home/tivo/pingAlerter/id.dat`
       if      [ "$ping_targets" != "$current" ]
          then
- 	    /usr/bin/printf "Hosts: $failed_hosts are down!" | /usr/local/bin/telegram-send --stdin --config /home/tivo/.config/telegram-ESPbot.conf
-      exit
+ 	    /usr/bin/printf "Host: $ping_targets is down!" | /usr/local/bin/telegram-send --stdin --config /home/tivo/.config/telegram-ESPbot.conf
+	
+      fi
    fi
 echo "${ping_targets}" > /home/tivo/kslscrapers/id.dat
+done
